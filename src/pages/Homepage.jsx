@@ -187,9 +187,9 @@ const BrandRow = ({ brand, videos }) => (
       <img src={brand.image} alt={brand.name} className="w-8 h-8 rounded-lg object-cover" />
       <h2 className="text-xl font-semibold text-gray-800">{brand.name}</h2>
     </div>
-    <div className="flex flex-wrap -mx-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-4">
       {videos.map((video) => (
-        <div key={video.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 2xl:w-1/8 px-2 mb-4">
+        <div key={video.id} className="w-full">
           <VideoCard submission={video} />
         </div>
       ))}
